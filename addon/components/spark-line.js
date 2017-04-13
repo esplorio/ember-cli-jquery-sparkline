@@ -17,5 +17,5 @@ export default Ember.Component.extend({
     //console.log(tempValues);
 
     this.set('sparkline', this.$().sparkline(tempValues, this.get('options')));
-  }.on('didInsertElement')
+  }.on('didInsertElement').observes('values')
 });
